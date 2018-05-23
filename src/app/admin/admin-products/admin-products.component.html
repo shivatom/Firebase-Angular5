@@ -1,0 +1,24 @@
+<div class="btn btn-primary" routerLink="/admin/products/new">New Product</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Picture</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products$ | async">
+        <td>{{product.title}}</td>
+        <td>{{product.price | currency : 'USD':'true'}}</td>
+        <td><img [src]="product.imageUrl"  width="90px" class="img-responsive rounded"/> </td>
+        <td><a [routerLink]="['/admin/products/new',product.$key]" >Edit</a></td>
+        </tr>
+    </tbody>
+</table>
+
+
+

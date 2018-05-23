@@ -1,0 +1,12 @@
+.dropdown-menu {
+    margin-top: 9px;
+}
+.fixed-top{
+    background-color: #3f51b5 !important;
+}
+.dropdown , .navbar a.nav-link{
+    color: #fff;
+}
+.dropdown-toggle{
+    cursor: pointer;
+}
